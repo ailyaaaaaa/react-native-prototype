@@ -20,24 +20,37 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
           },
           default: {},
         }),
       }}>
       <Tabs.Screen
-        name="index"
+        name="index"  // This will be your default tab
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Map',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="map" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="report"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Report',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="doc.text" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="emergency"
+        options={{
+          title: 'Emergency',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="exclamationmark.triangle" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape" color={color} />,
         }}
       />
     </Tabs>
