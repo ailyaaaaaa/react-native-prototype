@@ -5,7 +5,7 @@ import { Platform } from 'react-native';
 
 //Import custom components and utilities from local files
 import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -38,28 +38,28 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Map',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="map" color={color} />,
+          tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="map" size={size} color={color} />,
         }}
       />
       <Tabs.Screen
         name="report"
         options={{
           title: 'Report',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="doc.text" color={color} />,
+          tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="file-document" size={size} color={color} />,
         }}
       />
       <Tabs.Screen
         name="emergency"
         options={{
           title: 'Emergency',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="exclamationmark.triangle" color={color} />,
+          tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="alert" size={size} color={color} />,
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
           title: 'Settings',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape" color={color} />,
+          tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="cog" size={size} color={color} />,
         }}
       />
     </Tabs>
